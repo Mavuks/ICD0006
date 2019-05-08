@@ -1,22 +1,22 @@
-import React, {Component} from 'react';
-import Fooditem from './components/foods';
+import React, { Component } from 'react';
+import Foods from './components/foods';
 
 class App extends Component {
     render() {
         return (
-            <Fooditem fooditem={this.state.fooditem} />
+            <Foods foods={this.state.foods} />
         )
     }
 
     state = {
-        fooditem: []
+        foods: []
     };
 
     componentDidMount() {
-        fetch('https://api.fuud.ituk.ee/daily')
+        fetch('https://api.fuud.ituk.ee/daily/')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ foodtem: data })
+                this.setState({ foods: data.data })
             })
             .catch(console.log)
     }

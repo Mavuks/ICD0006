@@ -1,20 +1,33 @@
 import React from 'react'
+import './main.css';
 
-const Fooditem = ({fooditem}) => {
+const Foods = ({ foods }) => {
     return (
         <div>
-            {/* <center><h1>foods List</h1></center> */}
-            {fooditem.map((Fooditems) => (
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{Fooditems.name_est}</h5>
-{/*                         <h6 class="card-subtitle mb-2 text-muted">{contact.email}</h6>
-                        <p class="card-text">{contact.company.bs}</p> */}
+            <center><h1>food List</h1></center>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Söök</td>
+                        <td>Asukoht</td>
+                        <td>Hind</td>
+                    </tr>
+                </thead>
+
+                {foods.map((food) => (
+                    <div key={food.name_est}>
+                        <tbody>
+                            <tr>
+                                <td> {food.name_est}</td>
+                                <td>{food.price}</td>
+                                <td>{food.providers[0]}</td>
+                            </tr>
+                        </tbody>
                     </div>
-                </div>
-            ))}
+                ))}
+            </table>
         </div>
     )
 };
 
-export default Fooditem
+export default Foods
