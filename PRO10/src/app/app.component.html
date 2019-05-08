@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<body>
+<div>
+  <h2>Food Api</h2>
+    <table>
+        <thead>
+          <tr>
+            <td><h3>Söök</h3></td>
+            <td><h3>Asukoht</h3></td>
+            <td><h3>Hind</h3></td>
+          </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor = "let food of data">
+          <tr>
+
+            <td>{{food.name_est}}</td>
+            <td>{{food.providers[0]}}</td>
+            <td>{{food.price + "&euro;"}}</td>
+
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+
+</div>
+</body>
