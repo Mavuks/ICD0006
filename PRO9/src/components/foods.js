@@ -1,12 +1,14 @@
 import React from 'react'
 import './main.css';
 import '../App';
+//import App from '../App';
 
 const Foods = ({ foods }) => {
     return (
+        
         <body>
             <div className="App">
-                <center><h1>Food List</h1></center>
+                <h1>Food List</h1>
                 <table>
                     <thead>
                         <tr>
