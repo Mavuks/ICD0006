@@ -1,32 +1,32 @@
 import React from 'react'
 import './main.css';
+import '../App';
 
 const Foods = ({ foods }) => {
     return (
-        <div>
-            <center><h1>food List</h1></center>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Söök</td>
-                        <td>Asukoht</td>
-                        <td>Hind</td>
-                    </tr>
-                </thead>
-
-                {foods.map((food) => (
-                    <div key={food.name_est}>
-                        <tbody>
+        <body>
+            <div className="App">
+                <center><h1>Food List</h1></center>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Söök</td>
+                            <td>Asukoht</td>
+                            <td>Hind</td>
+                        </tr>
+                    </thead>
+                    {foods.map((food, id) => (
+                        <tbody key={id}>
                             <tr>
-                                <td> {food.name_est}</td>
-                                <td>{food.price}</td>
+                                <td>{food.name_est}</td>
                                 <td>{food.providers[0]}</td>
+                                <td>{food.price}</td>
                             </tr>
                         </tbody>
-                    </div>
-                ))}
-            </table>
-        </div>
+                    ))}
+                </table>
+            </div>
+        </body>
     )
 };
 

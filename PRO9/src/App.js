@@ -20,6 +20,12 @@ class App extends Component {
             })
             .catch(console.log)
     }
+
+    sortAscending = () => {
+        const {foods} = this.state;
+        foods.sort((a,b) => a- b)
+        this.setState({ foods})
+    }
 }
 
 export default App;
