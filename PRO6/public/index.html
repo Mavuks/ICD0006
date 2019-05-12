@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script/scripts.js"></script>
+    <meta http-equiv="refresh" content="30">
+    
+
+    <section id="login-screen" class="hero is-fullheight">
+        <div class="newBody">
+            <div class="column">
+                <h1 class="title is-size-2">
+                    Vali Kasjutajanimi
+                </h1>
+            </div>
+            <div class="column">
+                <div class="control">
+                    <input id="username" class="input is-medium" type="text" placeholder="Kasutajanimi" autofocus>
+                </div>
+                <div class="control">
+                    <br>
+                    <button id="user-login" class="button is-primary is-outlined is-medium">
+                        Submit
+                    </button>
+                </div>
+                <p id="username-taken" class="help is-danger" style="display: none;">Vali teine kasutajanimi</p>
+                <p id="username-empty" class="help is-warning" style="display: none;">Siseste kasutajanimi</p>
+            </div>
+        </div>
+    </section>
+    <section id="chat-screen" class="hero is-fullheight">
+        <div class="column">
+            <h2 class="title">Kasutajad: </h2>
+            <div id="user-table">
+            </div>
+        </div>
+        <div>
+            <div class="">
+                <div class="columns">
+                    <div class="column is-8">
+                        <div class="message-container">
+                        </div>
+                        <div class="input-container">
+                            <div class="columns">
+                                <div class="column is-10">
+                                    <textarea id="message" class="textarea" placeholder="Text area:" rows="5"
+                                        autofocus></textarea>
+                                </div>
+                                <div class="column">
+                                    <button id="message-send" class="button is-primary is-outlined is-medium">
+                                        Saada
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
