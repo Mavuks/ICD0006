@@ -8,13 +8,13 @@ const Foods = ({ foods }) => {
         
         <body>
             <div className="App">
-                <h1>Food List</h1>
+                <h1>Food Api</h1>
                 <table>
                     <thead>
                         <tr>
-                            <td>Söök</td>
-                            <td>Asukoht</td>
-                            <td>Hind</td>
+                            <td><h3>Söök</h3></td>
+                            <td><h3>Asukoht</h3></td>
+                            <td><h3>Hind</h3>   </td>
                         </tr>
                     </thead>
                     {foods.map((food, id) => (
