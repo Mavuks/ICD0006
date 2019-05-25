@@ -1,0 +1,19 @@
+section#grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+  }
+  
+  section#grid > div {
+    /*
+     * Align width calc em and margin em
+     * (width calc em = margin em *2)
+     */
+    box-sizing: border-box;
+    width: calc(100% / 3 - 0.2em);
+    height: calc(100% / 3 - 0.2em);
+    /* background-color: #fcaf3e; */
+    margin: 0.1em;
+    
+  }
